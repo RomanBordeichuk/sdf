@@ -1,0 +1,192 @@
+*{
+	box-sizing: border-box; 
+	font-family: Red Rose, cursive;
+	margin: 0;
+	padding: 0;
+}
+.container{
+	margin: 0 auto;
+	max-width: 1150px;
+	box-shadow: 0 0 10px grey;
+}
+header{
+	text-align: right;
+	width: 100%;
+	height: 455px;
+	background: url(../img/Header.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 10px;
+}
+@keyframes transmit{
+	from{
+		top: -250px;
+		opacity: 0;
+		font-size: 1px;
+	}
+	to{
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes transmitX{
+	0%{
+		right: -1000px;
+	}
+	70%{
+		right: 100px;
+	}
+	100%{
+		right: 0;
+		opacity: 1;
+	}
+}
+header h1{
+	margin-top: 100px;
+	font-size: 55px;
+	color: #4A6FE7;
+	position: relative;
+	animation-name: transmit;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+}
+header h2{
+	font-size: 18px;
+	color: #333F89;
+	position: relative;
+	animation-name: transmitX;
+	animation-duration: 1.4s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.nav_pages{
+	 width: 100%;
+	 background: #C8D9FD;
+	 display: flex;
+	 justify-content: space-evenly;
+	 align-items: center;
+	 height: 75px;
+}
+.nav_pages > a{
+	text-decoration: none;
+	font-size: 24px;
+	color: #333F89;
+	opacity: 0.5;
+	padding: 20px;
+	font-weight: bold;
+	transition: 1s;
+}
+.nav_pages > a:nth-child(3){
+	background: url(../img/logo_nav.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 58px;
+	height: 58px;
+}
+.nav_pages > a:nth-child(3):hover{
+	transform: rotate(120deg);
+	opacity: 1;
+	filter: brightness(1.3);
+}
+.nav_pages > a:hover{
+	transform: scale(1.2);
+	color: #2768D1;
+}
+footer{
+	height: 100px;
+	width: 100%;
+	background: #C8D9FD;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+footer h2{
+	color: #333F89;
+	font-size: 34px;
+}
+footer h3{
+	color: #333F89;
+	font-size: 14px;
+}
+.footer_headline{
+	display: flex;
+}
+.footer_headline a{
+	background: url(../img/logo_nav.png);
+	width: 58px;
+	height: 58px;
+}
+.footer_headline div{
+	margin-left: 20px;
+}
+.footer_headline h2{
+	color: #2784D1;
+}
+.nav_social{
+	display: flex;
+}
+.nav_social img{
+	transition: 0.5s;
+	margin-right: 10px;
+}
+.nav_footer{
+	width: 200px;
+	height: 55%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.nav_footer > div{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.nav_footer a{
+	font-weight: bold;
+	text-decoration: none;
+	color: #2784D1;
+	transition: 0.5s;
+}
+.nav_footer a[href="index.html"]{
+	left:0;
+	top:10px;
+}
+.nav_footer a[href="skills.html"]{
+	left:110px;
+	top:10px;
+}
+.nav_footer a[href="games.html"]{
+	left:0;
+	top:45px;
+}
+.nav_footer a[href="team.html"]{
+	left:110px;
+	top:45px;
+}
+.nav_footer a:hover{
+	transform: scale(1.2);
+	color: #2768D1;
+}
+.nav_social img:hover{
+	transform: scale(1.2);
+}
+
+@media(max-width: 700px){
+	.side_nav{
+		display: none;
+	}
+	.nav_pages{
+		align-content: space-between;
+	}
+	.nav_pages a{
+		padding: 0;
+	}
+	.nav_pages a:nth-child(3){
+		display: none;
+	}
+	.footer_headline{
+		display: none;
+	}
+}

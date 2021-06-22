@@ -1,0 +1,262 @@
+.main_body{
+	padding: 20px;
+	width: 100%;
+}
+.main_body > div{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+	margin-bottom: 20px;
+}
+.main_body img{
+	object-fit: cover;
+}
+.nav_pages > a:nth-child(1){
+	opacity: 1; 
+	font-size: 28px;
+}
+.nav_footer a:nth-child(1){
+	filter: brightness(0.7);
+	font-size: 20px;
+}
+.goal{
+	position: relative;
+	opacity: 0;
+	animation-name: from_left;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+.topicality{
+	position: relative;
+	opacity: 0;
+	animation-name: from_right;
+	animation-duration: 1s;
+	animation-delay: 1.3s;
+	animation-fill-mode: forwards;
+}
+.tecnologies{
+	position: relative;
+	opacity: 0;
+	animation-name: from_left;
+	animation-duration: 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+}
+.goal_text{
+	padding: 4%;
+	width: 60%;
+	background: #4970E7;
+	border-radius: 20px;
+	margin-right: 20px;
+	vertical-align: top;
+	opacity: 0.7;
+}
+.goal_img{
+	width: 38%;
+	border-radius: 20px;
+}
+.goal_img img{
+	border-radius: 20px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.topicality_img{
+	border-radius: 20px;
+	width: 38%;
+}
+.topicality_img img{
+	border-radius: 20px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.topicality_text{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 4%;
+	width: 60%;
+	background: #FD7462;
+	border-radius: 20px;
+}
+.tecnologies_text{
+	background: #9CDDBB;
+	border-radius: 20px;
+	margin-right: 20px;
+	padding: 4%;
+	width: 60%;
+}
+.tecnologies_img{
+	background: #9CDDBB;
+	border-radius: 20px;
+	width: 38%;
+}
+.tecnologies_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px;
+}
+.tecnologies{
+	margin-bottom: 0;
+}
+.goal span, .tecnologies span{
+	position: relative;
+	margin-left: 5%;
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	font-family: arial;
+}
+.moving_underline_left{
+	position: relative;
+	bottom: 20px;
+	margin-left: 5%;
+	width: 80px;
+	height: 27px;
+	border-bottom: 3px solid white;
+	transition: 0.5s;
+}
+.moving_underline_right{
+	position: relative;
+	right: 20px;
+	bottom: 20px;
+	width: 80px;
+	height: 27px;
+	border-bottom: 3px solid white;
+	transition: 0.5s;
+}
+.tecnologies .moving_underline_left{
+	border-bottom: 3px solid #4D7745;
+}
+.tecnologies span{
+	color: #4D7745;
+}
+.topicality span{
+	position: relative;
+	right: 20px;
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	font-family: arial;
+}
+.main_body p{
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+	text-align: justify;
+}
+.tecnologies_text p{
+	color: #4D7745;
+}
+.nav_pages > a[href="http://xn--j1ae8a.in.ua/"]:hover{
+	transform: rotate(120deg);
+	opacity: 1;
+	filter: brightness(1.2);
+}
+.main_body > div > div{
+	transition: 0.5s;
+}
+.main_body > div > div:hover{
+	transform: translateY(-10px);
+	filter: brightness(1.2);
+}
+.goal_text:hover .moving_underline_left{
+	width: 185px;	
+}
+.tecnologies_text:hover .moving_underline_left{
+	width: 262px;	
+}
+.topicality:hover .moving_underline_right{
+	width: 303px;	
+}
+.side_nav{
+	position: fixed;
+	z-index: 1;
+	top: 150px;
+	left: 12px;
+}
+.side_nav a{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid white;
+	text-decoration: none;
+	color:white;
+	transition: 0.7s;
+}
+.side_nav a > span{
+	position: relative;
+	left: 40px;
+	top: 10px;
+	opacity: 0;
+	width: 300px;
+	display: inline-block;
+}
+.link_goal a{
+	background: #4970E7;
+}
+.link_topicality a{
+	background: #FD7462;
+}
+.link_tecnologies a{
+	background: #9CDDBB;
+}
+.link_goal a:hover{
+	width: 300px;
+}
+.link_goal a:hover span{
+	opacity: 1;
+	transition-duration: 0.7s;
+}
+.link_topicality a:hover{
+	width: 300px;
+}
+.link_topicality a:hover span{
+	opacity: 1;
+	transition-duration: 0.7s;
+}
+.link_tecnologies a:hover{
+	width: 300px;
+}
+.link_tecnologies a:hover span{
+	opacity: 1;
+	transition-duration: 0.7s;
+}
+@keyframes from_left{
+	from{
+		position: relative;
+		left: -1000px;
+		opacity: 0;
+	}
+	to{
+		position: relative;
+		left: 0;
+		opacity: 1;
+	}
+}
+@keyframes from_right{
+	from{
+		position: relative;
+		right: -1000px;
+		opacity: 0;
+	}
+	to{
+		position: relative;
+		right: 0;
+		opacity: 1;
+	}
+}
+
+@media(max-width: 700px){
+	.main_body > div{
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+	.main_body > div > div{
+		width: 100%;
+	}
+}	
